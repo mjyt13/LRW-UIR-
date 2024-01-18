@@ -166,12 +166,3 @@ class Ui_DashBoard(object):
         plt.plot(grades)
         plt.savefig('graphics.png')
         plt.clf()
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    DashBoard = QtWidgets.QMainWindow()
-    ui = Ui_DashBoard()
-    ui.setupUi(DashBoard)
-    DashBoard.show()
-    sys.exit(app.exec_())
