@@ -150,7 +150,18 @@ class Ui_DashBoard(object):
         self.labelMax.setText("Отметка с наибольшим \nзначением: " + retranslate(Max(numberSubject)[1]))
         self.labelModa.setText("Наиболее частая \nотметка: " + retranslate(Moda(numberSubject)[1]))
         self.labelMiddle.setText("Средняя отметка в \nчисловом значении: " + str(Middle(numberSubject)[1]))
-        self.labelAVGsubject.setText("Среднее арифмитическое по всем предметам у всех студентов: " + str(
+        Subject=""
+        if numberSubject==1:
+            Subject = "Матем."
+        if numberSubject==2:
+            Subject = "ИСиС"
+        if numberSubject==3:
+            Subject = "Социол."
+        if numberSubject==4:
+            Subject = "ИГиКГ"
+        if numberSubject==5:
+            Subject = "ЯПиМТ"
+        self.labelAVGsubject.setText("Среднее арифмитическое по предмету "+Subject+" у всех студентов: " + str(
             ArithmeticMean(numberSubject)[1]))
         self.labelLISTsubject.setText(SortingListSubject(numberSubject))
         self.plot_graphics(numberSubject)
