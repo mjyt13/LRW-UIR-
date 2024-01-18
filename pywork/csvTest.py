@@ -53,7 +53,7 @@ def ArithmeticMean(mode, sortStud=students):
         grades = [int(student[disciplines[mode - 1]]) for student in sortStud]
         return [disciplines[mode - 1], round(sum(grades) / len(students), 2)]
     else:
-        print("Абасрался чухан")
+        print("Неверное значение для предмета")
 
 
 def DisciplineGrades(mode, sortStud=students):
@@ -64,7 +64,7 @@ def DisciplineGrades(mode, sortStud=students):
         grades = [[student[keys[0]], student[disciplines[mode - 1]]] for student in sortStud]
         return [disciplines[mode - 1]] + grades
     else:
-        print("Абасрался чухан")
+        print("Неверное значение для предмета")
 
 
 def sortByGrades(mode, reverse=False):  # сортировка Пузырьком
@@ -80,7 +80,7 @@ def sortByGrades(mode, reverse=False):  # сортировка Пузырько�
                 if studentsCopy[i][disciplines[mode - 1]] > studentsCopy[j][disciplines[mode - 1]]:
                     studentsCopy[i], studentsCopy[j] = studentsCopy[j], studentsCopy[i]
     else:
-        print("Абасрался чухан")
+        print("Неверное значение для предмета")
 
     return studentsCopy[::-1] if reverse else studentsCopy
 
@@ -102,7 +102,7 @@ def Middle(mode):
             if middle[1] == int(student[middle[0]]): middle.append(student[keys[0]])
         return middle
     else:
-        print("Абасрался чухан")
+        print("Неверное значение для предмета")
 
 
 def Min(mode):
@@ -119,7 +119,7 @@ def Min(mode):
             if Min[1] == int(student[Min[0]]): Min.append(student[keys[0]])
         return Min
     else:
-        print("Абасрался чухан")
+        print("Неверное значение для предмета")
 
 
 def Max(mode):
@@ -136,7 +136,7 @@ def Max(mode):
             if Max[1] == int(student[Max[0]]): Max.append(student[keys[0]])
         return Max
     else:
-        print("Абасрался чухан")
+        print("Неверное значение для предмета")
 
 
 def Moda(mode):
@@ -153,7 +153,7 @@ def Moda(mode):
             if moda[1] == int(student[moda[0]]): moda.append(student[keys[0]])
         return moda
     else:
-        print("Абасрался чухан")
+        print("Неверное значение для предмета")
 
 
 ##for i in ArithmeticMean(0):
