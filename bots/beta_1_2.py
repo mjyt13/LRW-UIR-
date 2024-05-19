@@ -88,8 +88,7 @@ def main(message):
 @bot.message_handler()
 def not_care(message):
     if message.text.lower() == 'vvvv':
-        bot.reply_to(message, f'{message.from_user.first_name} {message.from_user.last_name}\n'
-                              f',батоны ахуительны')
+        bot.reply_to(message, f'{message.from_user.first_name} {message.from_user.last_name}\n')
     elif message.text.lower() == 'я пивас':
         bot.send_message(message.chat.id, "я тоже, лови объяснение метода нового храма")
         webbrowser.open("https://gofman39.narod.ru/Igor23.html")
